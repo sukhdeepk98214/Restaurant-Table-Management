@@ -9,8 +9,7 @@ import retrofit2.http.GET
 interface RestaurantService {
     @GET("/quandoo-assessment/customers.json")
     suspend fun customers(): Response<List<CustomerResponse>>
-
-
+    
     @GET("/quandoo-assessment/reservations.json")
     suspend fun reservations(): Response<List<ReservationResponse>>
 
