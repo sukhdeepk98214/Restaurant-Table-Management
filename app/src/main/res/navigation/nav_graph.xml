@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/tableFragment">
+
+    <fragment
+        android:id="@+id/tableFragment"
+        android:name="com.sukhdeep.androidtask.ui.tables.TableFragment"
+        android:label="@string/tables"
+        tools:layout="@layout/fragment_table">
+        <action
+            android:id="@+id/action_tableFragment_to_customerFragment"
+            app:destination="@id/customerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customerFragment"
+        android:name="com.sukhdeep.androidtask.ui.customers.CustomerFragment"
+        android:label="@string/customers"
+        tools:layout="@layout/fragment_customer">
+        <action
+            android:id="@+id/action_customerFragment_to_tableFragment"
+            app:destination="@id/tableFragment" />
+    </fragment>
+
+</navigation>
